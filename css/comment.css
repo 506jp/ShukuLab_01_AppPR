@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: sans-serif;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .bubble-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .bubble-wrapper:not(:first-of-type) {
+    margin-top: 40px;
+  }
+  
+  .bubble-wrapper:nth-of-type(2n) {
+    flex-direction: row-reverse;
+  }
+  
+  .bubble-wrapper::after {
+    display: block;
+    content: '';
+  }
+  
+  .bubble {
+    position: relative;
+    max-width: 60%;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .bubble::after {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 18px;
+    height: 20px;
+    bottom: 20px;
+  }
+  
+  .bubble-wrapper:nth-of-type(2n) .bubble {
+    background-color: #4c4c6d;
+    color: white;
+  }
+  
+  .bubble-wrapper:nth-of-type(2n + 1) .bubble {
+    background-color: #e8f6ef;
+    color: #222;
+  }
+  
+  .bubble-wrapper:nth-of-type(2n) .bubble::after {
+    background-color: #4c4c6d;
+    clip-path: polygon(0 0, 0% 100%, 100% 50%);
+    right: -16px;
+  }
+  
+  .bubble-wrapper:nth-of-type(2n + 1) .bubble::after {
+    background-color: #e8f6ef;
+    clip-path: polygon(0 50%, 100% 0, 100% 100%);
+    left: -16px;
+  }

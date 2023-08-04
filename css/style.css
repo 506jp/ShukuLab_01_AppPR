@@ -1,0 +1,12 @@
+body{
+    background-color: #232121;
+}
+h3{
+    font-family: 'Zen Maru Gothic', sans-serif;
+    color: skyblue;
+}
+#carouselExampleRide{
+    margin: auto;
+    height: auto;
+    width: 900px;
+}
