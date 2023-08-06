@@ -6,7 +6,7 @@ h3{
     color: skyblue;
 }
 #carouselExampleRide{
-    margin: auto;
+    margin: 20px auto;
     height: auto;
-    width: 900px;
+    width: 100%;
 }
